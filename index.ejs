@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Anonymous Posting</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome to Anonymous Postings(Twitter but better)</h1>
+    <h3 style="text-align: center;">Post your deepest and darkest secrets... or not. I'm not your dad.</h3>
+
+    <div class="container">
+        <div class="PostingSection">
+            <h1>Post Anonymously your thoughts</h1>
+            <form action="/api/users" method="POST">
+                <textarea maxlength="100" name="post" id="post" required></textarea>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+    <% for(var i = 0;i < course.length;i++) { %>
+        <br>
+        <div class="container">
+            <div class="PostingSection2">
+                <p>Anonymous User: <%= course[i].post %></p>
+                    <button id="button<%=i%>" data-id="<%= course[i]._id%>" onclick="deletePost(this.id)">Delete</button>
+                    <a href="/update?id=<%= course[i]._id%>"><button>Update Post</button></a>
+            </div>
+        </div>  
+    <% } %>
+
+
+    
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
