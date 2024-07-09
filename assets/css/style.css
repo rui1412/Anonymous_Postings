@@ -1,0 +1,40 @@
+body{
+    background-color: #478CCF;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: #36C2CE;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    margin: auto;
+}
+
+.PostingSection {
+    padding: 10px;
+    text-align: center;
+}
+
+.PostingSection2 {
+    padding: 10px;
+    text-align: left;
+}
+
+#post {
+    padding: 20px;
+    font-size: 20px;
+    width: 85%;
+    height: 75px;
+    overscroll-behavior-y: contain;
+    resize: none;
+}
+
+#submit {
+    padding: 20px;
+    font-size: 20px;
+}
