@@ -1,7 +1,7 @@
 function deletePost(value){
     var dataId = document.getElementById(value).getAttribute('data-id')
     console.log(dataId)
-    fetch(`http://localhost:3000/api/users/${dataId}`, {method:'DELETE'})
+    fetch(`https://anonymous-postings-anisur-rahman.onrender.com/api/users/${dataId}`, {method:'DELETE'})
         .then(data=>{
             console.log(data)
             location.reload()
@@ -27,7 +27,7 @@ $("#update").submit(function(event){
     })
     
     var request = {
-        "url": `http://localhost:3000/api/users/${document.getElementById('post').getAttribute('data-id')}`,
+        "url": `https://anonymous-postings-anisur-rahman.onrender.com/api/users/${document.getElementById('post').getAttribute('data-id')}`,
         "method": "PUT",
         "data":data
     }

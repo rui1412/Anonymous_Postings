@@ -30,7 +30,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 app.get('/', (req, res) => {
     //get all courses
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://anonymous-postings-anisur-rahman.onrender.com/api/users')
         .then(function(response){
             res.render('index',{course:response.data});
         })
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/update', (req, res) => {
-    axios.get('http://localhost:3000/api/users', {params:{id:req.query.id}})
+    axios.get('https://anonymous-postings-anisur-rahman.onrender.com/api/users', {params:{id:req.query.id}})
     .then(function(userdata){
         res.render('update', {user:userdata.data})
     })
@@ -56,4 +56,4 @@ app.get('/api/users', controller.find)
 app.put('/api/users/:id', controller.update)
 app.delete('/api/users/:id', controller.delete)
 
-app.listen(PORT, ()=> {console.log(`Server is running on http://localhost:${PORT}`)})
+app.listen(PORT, ()=> {console.log(`Server is running on https://anonymous-postings-anisur-rahman.onrender.com:${PORT}`)})
